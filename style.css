@@ -1,0 +1,544 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    overflow-x: hidden;
+    font-family: "Quicksand", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.about h1,
+.skills h1,
+.resume h1,
+.services h1,
+.portfolio h1,
+.contact h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline: none !important;
+}
+
+:root {
+    --line-color: #2c3e50;
+    --heading-color: #c0392b;
+    --first-color: #ffffff;
+    --second-color: #000000;
+}
+
+
+/*Header*/
+
+.menu-bar {
+    min-height: 8%;
+    background: var(--second-color);
+}
+
+.nav-link {
+    color: var(--first-color);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin: 10px 15px 10px 0;
+    text-transform: uppercase;
+    font-family: "poppins";
+}
+
+.nav-link:hover {
+    color: var(--heading-color);
+}
+
+.active {
+    color: var(--heading-color) !important;
+}
+
+.navbar-toggler .fa {
+    color: var(--first-color);
+    margin: 10px 0 10px 0;
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+#header-text-one,
+#header-text-two {
+    letter-spacing: 13px !important;
+}
+
+
+/*Hero*/
+
+.hero {
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("./img/drew-saurus-C7jBZEGciCU-unsplash.jpg") bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.hero h1 {
+    font-size: 100px;
+    color: var(--first-color);
+    font-family: "poppins";
+}
+
+.hero h2 {
+    color: var(--first-color);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero .btn-scroll {
+    transition: 0.4s;
+    color: rgba(255, 255, 255, 0.6);
+    animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+.hero .btn-scroll .fa {
+    font-size: 30px;
+}
+
+.hero .btn-scroll:hover {
+    color: var(--heading-color);
+}
+
+@media (max-width: 575px) {
+    .hero h1 {
+        font-size: 65px;
+    }
+    .hero h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/*About*/
+
+.about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #555555;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    padding-bottom: 10px;
+}
+
+.about .content ul i {
+    font-size: 20px;
+    padding-right: 2px;
+    color: var(--heading-color);
+}
+
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/*Skills*/
+
+.skills {
+    padding: 50px 0;
+    background-color: #efefef;
+}
+
+.skills .skills-content {
+    margin-top: 30px;
+}
+
+.skills .skills-content .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+.skills .skills-content .progress .skill {
+    padding: 10px 0px;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Markazi Text", serif;
+    color: var(--second-color);
+}
+
+.skills .skills-content .progress .skill .value {
+    float: right;
+    font-style: normal;
+}
+
+.skills .skills-content .progress-bar-wrap {
+    background: #e6e8eb;
+    border-radius: 50px;
+}
+
+.skills .skills-content .progress-bar {
+    width: 1px;
+    height: 10px;
+    border-radius: 50px;
+    transition: 0.9s;
+    background-color: var(--line-color);
+}
+
+
+/*Services*/
+
+.services {
+    padding: 80px 0;
+    background-color: #efefef;
+}
+
+.services .box {
+    padding: 30px;
+    width: 350px;
+    background: var(--first-color);
+    text-align: center;
+    border: 0px solid var(--second-color);
+    margin: 10px auto;
+    box-shadow: 2.5px 0 5px #1b1b1b59;
+    overflow: hidden;
+    position: relative;
+}
+
+.services .icon {
+    margin: 0 auto 20px auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.services .icon .fa {
+    font-size: 50px;
+    line-height: 1;
+    color: #c0392b;
+}
+
+.services .title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-family: "Markazi Text", serif;
+}
+
+.services .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.services .box:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 2px solid var(--line-color);
+    border-left: 2px solid var(--line-color);
+    bottom: 5%;
+    left: 5%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.services .box:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 2px solid var(--line-color);
+    border-right: 2px solid var(--line-color);
+    top: 5%;
+    right: 5%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.services .box:hover:before,
+.services .box:hover:after {
+    opacity: 1;
+    width: 90%;
+    height: 90%;
+}
+
+@media screen and (max-width: 768px) {
+    .services .box {
+        width: 100%;
+    }
+}
+
+
+/*Count*/
+
+.count {
+    padding: 50px 0;
+}
+
+.count .count-box .fa {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 18px;
+}
+
+.count .count-box span {
+    font-size: 40px;
+    line-height: 30px;
+    display: block;
+    font-weight: 700;
+    color: #3b434a;
+    margin-left: -5px;
+}
+
+.count .count-box h6 {
+    font-size: 25px;
+    color: var(--second-color);
+    font-weight: bold;
+    margin-top: 15px;
+    font-family: "Markazi Text", serif;
+}
+
+.count .count-box p {
+    font-weight: 400;
+    display: block;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: #34495e;
+    font-size: 15px;
+    transition: ease-in-out 0.3s;
+}
+
+
+/*Contact*/
+
+.contact {
+    padding: 50px 0;
+}
+
+.contact .Contactform {
+    box-shadow: 0 0 5px #bababa;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.contact .Contactform input {
+    padding: 20px 15px;
+}
+
+.contact .Contactform textarea {
+    padding: 12px 15px;
+}
+
+.contact .Contactform input,
+.contact .Contactform textarea {
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.contact .Contactform .submit {
+    padding: 10px 20px;
+    transition: 0.4s;
+    border-radius: 5px;
+    font-family: "Markazi Text", serif;
+    font-size: 22px;
+    font-weight: 500;
+    background: var(--first-color);
+    color: var(--second-color);
+    border: 1px solid var(--line-color);
+}
+
+.contact .Contactform .submit:hover {
+    color: var(--first-color);
+    background: var(--line-color);
+}
+
+.contact .info-box {
+    color: var(--second-color);
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 0 5px #bababa;
+    padding: 10px 30px;
+}
+
+.contact .info-box .share {
+    font-size: 25px;
+    color: var(--heading-color);
+    padding: 15px;
+}
+
+.contact .info-box h3 {
+    font-size: 28px;
+    color: var(--second-color);
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Markazi Text", serif;
+}
+
+.contact .info-box .social-links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .info-box .social-links .fa {
+    font-size: 20px;
+    display: inline-block;
+    background: #efefef;
+    color: var(--second-color);
+    line-height: 1;
+    padding: 8px 0;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+    text-align: center;
+    width: 38px;
+    height: 38px;
+    transition: 0.3s;
+}
+
+.contact .info-box .social-links .fa:hover {
+    color: var(--first-color);
+    background: var(--line-color);
+}
+
+.contact .info-box .info-detail p {
+    font-size: 17px;
+    display: inline-block;
+    color: var(--second-color);
+    line-height: 2;
+    margin: 12px;
+}
+
+
+/*Footer*/
+
+.footer {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/Footer.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 60px;
+}
+
+.footer h2 {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--first-color);
+    position: relative;
+    font-family: "Markazi Text", serif;
+    padding: 40px;
+    margin: 20px 0 15px 0;
+}
+
+.footer p {
+    font-size: 15px;
+    text-align: center;
+    margin-top: -50px;
+    color: var(--first-color);
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .social-links .fa {
+    font-size: 20px;
+    display: inline-block;
+    background: var(--line-color);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+.footer .copyright {
+    padding: 100px 0 10px 0;
+    font-family: "Markazi Text", serif;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 55px;
+    bottom: 35px;
+    z-index: 99999;
+}
+
+.back-to-top .fa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 5px;
+    color: var(--first-color);
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: var(--line-color);
+}
