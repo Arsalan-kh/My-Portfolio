@@ -172,6 +172,13 @@ select:focus {
     font-size: 26px;
     color: #555555;
 }
+.about-me{
+ 
+    line-height: 23px;
+    text-align: justify;
+    font-size: 17px;
+
+}
 
 .about .content ul {
     list-style: none;
@@ -330,7 +337,7 @@ div.card {
 }
 
 img.img-fluid {
-    min-width: 340px;
+    min-width: 220px;
     max-height: 300px;
 }
 
